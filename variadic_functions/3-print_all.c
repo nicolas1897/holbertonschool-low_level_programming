@@ -64,7 +64,6 @@ datatype choice[] = { {'c', print_char},
 {'s', print_string},
 {'\0', NULL} };
   
-/* iterate format; if datatype matched, access function via struct */
 va_start(valist, format);
 while (format != NULL && format[j] != '\0')
 {
@@ -74,7 +73,7 @@ while (choice[i].letter != '\0')
 if (choice[i].letter == format[j])
 {
 printf("%s", separator);
-choice[i].func(valist); /*access va_arg later*/
+choice[i].func(valist);
 separator = ", ";
 }
 i++;
