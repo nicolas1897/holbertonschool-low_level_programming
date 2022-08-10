@@ -23,5 +23,4 @@ return (NULL);
 for (i = 0; i < n; i++)
 ptr[i] = min++;
 return (ptr);
-  
 }
